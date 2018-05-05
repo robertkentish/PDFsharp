@@ -29,7 +29,7 @@
     <SignAssembly>true</SignAssembly>
     <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -44,6 +44,7 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -558,6 +559,9 @@
     <Compile Include="..\PdfSharp\Pdf.AcroForms\enums\PdfAcroFieldFlags.cs">
       <Link>Pdf.AcroForms\enums\PdfAcroFieldFlags.cs</Link>
     </Compile>
+    <Compile Include="..\PdfSharp\Pdf.AcroForms\enums\TextAlignment.cs">
+      <Link>Pdf.AcroForms\enums\TextAlignment.cs</Link>
+    </Compile>
     <Compile Include="..\PdfSharp\Pdf.AcroForms\PdfAcroField.cs">
       <Link>Pdf.AcroForms\PdfAcroField.cs</Link>
     </Compile>
@@ -870,11 +874,23 @@
     <Compile Include="..\PdfSharp\Pdf.Printing\PdfFilePrinter.cs">
       <Link>Pdf.Printing\PdfFilePrinter.cs</Link>
     </Compile>
+    <Compile Include="..\PdfSharp\Pdf.Security\AESEncryptor.cs">
+      <Link>Pdf.Security\AESEncryptor.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\Pdf.Security\EncryptorBase.cs">
+      <Link>Pdf.Security\EncryptorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\Pdf.Security\EncryptorFactory.cs">
+      <Link>Pdf.Security\EncryptorFactory.cs</Link>
+    </Compile>
     <Compile Include="..\PdfSharp\Pdf.Security\enums\PdfDocumentSecurity.cs">
       <Link>Pdf.Security\enums\PdfDocumentSecurity.cs</Link>
     </Compile>
     <Compile Include="..\PdfSharp\Pdf.Security\enums\PdfUserAccessPermission.cs">
       <Link>Pdf.Security\enums\PdfUserAccessPermission.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\Pdf.Security\IEncryptor.cs">
+      <Link>Pdf.Security\IEncryptor.cs</Link>
     </Compile>
     <Compile Include="..\PdfSharp\Pdf.Security\MD5Managed.cs">
       <Link>Pdf.Security\MD5Managed.cs</Link>
@@ -887,6 +903,9 @@
     </Compile>
     <Compile Include="..\PdfSharp\Pdf.Security\PdfStandardSecurityHandler.cs">
       <Link>Pdf.Security\PdfStandardSecurityHandler.cs</Link>
+    </Compile>
+    <Compile Include="..\PdfSharp\Pdf.Security\RC4Encryptor.cs">
+      <Link>Pdf.Security\RC4Encryptor.cs</Link>
     </Compile>
     <Compile Include="..\PdfSharp\Pdf\EntryInfoAttribute.cs">
       <Link>Pdf\EntryInfoAttribute.cs</Link>

@@ -441,6 +441,8 @@ namespace PdfSharp.Pdf
         /// </summary>
         internal override void PrepareForSave()
         {
+            FinishPageImport();
+
             PdfDocumentInformation info = Info;
 
             // Add patch level to producer if it is not '0'.
@@ -856,10 +858,16 @@ namespace PdfSharp.Pdf
         /// </summary>  
         public void Flatten()
         {
-            for (int idx = 0; idx < AcroForm.Fields.Count; idx++)
-            {
-                AcroForm.Fields[idx].ReadOnly = true;
-            }
+            Catalog.AcroForm.Flatten();
+        }
+
+        /// <summary>
+        /// Must be called after adding pages to a document to fix up page-references in imported Acro-Fields.
+        /// </summary>
+        public void FinishPageImport()
+        {
+            if (Pages != null)
+                Pages.FixupAcroFields();
         }
 
         /// <summary>
