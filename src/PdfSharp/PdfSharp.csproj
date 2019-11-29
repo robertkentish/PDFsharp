@@ -198,6 +198,7 @@
     <Compile Include="Internal\NativeMethods.cs" />
     <Compile Include="Internal\TokenizerHelper.cs" />
     <Compile Include="Pdf.AcroForms\enums\PdfAcroFieldFlags.cs" />
+    <Compile Include="Pdf.AcroForms\enums\TextAlignment.cs" />
     <Compile Include="Pdf.AcroForms\PdfAcroField.cs" />
     <Compile Include="Pdf.AcroForms\PdfAcroForm.cs" />
     <Compile Include="Pdf.AcroForms\PdfButtonField.cs" />
@@ -308,12 +309,17 @@
     <Compile Include="Pdf.IO\PdfWriter.cs" />
     <Compile Include="Pdf.IO\ShiftStack.cs" />
     <Compile Include="Pdf.Printing\PdfFilePrinter.cs" />
+    <Compile Include="Pdf.Security\AESEncryptor.cs" />
+    <Compile Include="Pdf.Security\EncryptorBase.cs" />
+    <Compile Include="Pdf.Security\EncryptorFactory.cs" />
     <Compile Include="Pdf.Security\enums\PdfDocumentSecurity.cs" />
     <Compile Include="Pdf.Security\enums\PdfUserAccessPermission.cs" />
+    <Compile Include="Pdf.Security\IEncryptor.cs" />
     <Compile Include="Pdf.Security\MD5Managed.cs" />
     <Compile Include="Pdf.Security\PdfSecurityHandler.cs" />
     <Compile Include="Pdf.Security\PdfSecuritySettings.cs" />
     <Compile Include="Pdf.Security\PdfStandardSecurityHandler.cs" />
+    <Compile Include="Pdf.Security\RC4Encryptor.cs" />
     <Compile Include="Pdf.Structure\PdfAttributesBase.cs" />
     <Compile Include="Pdf.Structure\PdfLayoutAttributes.cs" />
     <Compile Include="Pdf.Structure\PdfObjectReference.cs" />
